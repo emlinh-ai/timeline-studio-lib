@@ -1,0 +1,181 @@
+/* React Timeline Library - Base Styles */
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.timeline-header {
+  position: relative;
+  z-index: 10;
+  background: var(--timeline-header-bg, #f5f5f5);
+  border-bottom: 1px solid var(--timeline-border-color, #e0e0e0);
+}
+
+.timeline-body {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.timeline-track {
+  position: relative;
+  border-bottom: 1px solid var(--timeline-border-color, #e0e0e0);
+  background: var(--timeline-track-bg, #ffffff);
+}
+
+.timeline-clip {
+  position: absolute;
+  border-radius: var(--timeline-clip-border-radius, 4px);
+  border: 2px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.timeline-clip:hover {
+  filter: brightness(1.1);
+}
+
+.timeline-clip.selected {
+  border-color: var(--timeline-primary-color, #007acc);
+  box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.3);
+}
+
+.timeline-clip.dragging {
+  z-index: 1000;
+  opacity: 0.8;
+}
+
+/* Clip type specific styles */
+.timeline-clip--video {
+  background: var(--timeline-clip-video-color, #4CAF50);
+}
+
+.timeline-clip--audio {
+  background: var(--timeline-clip-audio-color, #FF9800);
+}
+
+.timeline-clip--text {
+  background: var(--timeline-clip-text-color, #2196F3);
+}
+
+.timeline-clip--overlay {
+  background: var(--timeline-clip-overlay-color, #9C27B0);
+}
+
+/* Resize handles */
+.timeline-clip-resize-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.timeline-clip:hover .timeline-clip-resize-handle {
+  opacity: 1;
+}
+
+.timeline-clip-resize-handle--left {
+  left: -4px;
+}
+
+.timeline-clip-resize-handle--right {
+  right: -4px;
+}
+
+/* Time ruler */
+.timeline-ruler {
+  position: relative;
+  height: 30px;
+  background: var(--timeline-ruler-bg, #fafafa);
+  border-bottom: 1px solid var(--timeline-border-color, #e0e0e0);
+}
+
+.timeline-ruler-tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid var(--timeline-tick-color, #ccc);
+}
+
+.timeline-ruler-tick--major {
+  border-left-color: var(--timeline-tick-major-color, #999);
+}
+
+.timeline-ruler-label {
+  position: absolute;
+  top: 2px;
+  font-size: 11px;
+  color: var(--timeline-text-color, #666);
+  font-family: monospace;
+}
+
+/* Scrollbar styling */
+.timeline-scrollable::-webkit-scrollbar {
+  height: 12px;
+}
+
+.timeline-scrollable::-webkit-scrollbar-track {
+  background: var(--timeline-scrollbar-track, #f1f1f1);
+}
+
+.timeline-scrollable::-webkit-scrollbar-thumb {
+  background: var(--timeline-scrollbar-thumb, #c1c1c1);
+  border-radius: 6px;
+}
+
+.timeline-scrollable::-webkit-scrollbar-thumb:hover {
+  background: var(--timeline-scrollbar-thumb-hover, #a8a8a8);
+}
+
+/* Focus styles for accessibility */
+.timeline-clip:focus {
+  outline: 2px solid var(--timeline-focus-color, #007acc);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .timeline-clip {
+    border-width: 3px;
+  }
+  
+  .timeline-clip.selected {
+    border-width: 4px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-clip,
+  .timeline-clip-resize-handle {
+    transition: none;
+  }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .timeline-container {
+    --timeline-header-bg: #2d2d2d;
+    --timeline-border-color: #404040;
+    --timeline-track-bg: #1e1e1e;
+    --timeline-ruler-bg: #2d2d2d;
+    --timeline-tick-color: #555;
+    --timeline-tick-major-color: #777;
+    --timeline-text-color: #ccc;
+    --timeline-scrollbar-track: #2d2d2d;
+    --timeline-scrollbar-thumb: #555;
+    --timeline-scrollbar-thumb-hover: #666;
+  }
+}

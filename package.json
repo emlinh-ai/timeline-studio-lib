@@ -1,0 +1,117 @@
+{
+  "name": "react-timeline-library",
+  "version": "1.0.0",
+  "description": "A reusable React video editing timeline library with multi-track support",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./styles": {
+      "import": "./dist/styles/timeline.css",
+      "require": "./dist/styles/timeline.css"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "npm run clean && cross-env NODE_ENV=production rollup -c",
+    "build:dev": "npm run clean && rollup -c",
+    "build:watch": "npm run clean && rollup -c -w",
+    "dev": "rollup -c -w",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "analyze": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "size": "npm run build && bundlesize"
+  },
+  "keywords": [
+    "react",
+    "timeline",
+    "video-editing",
+    "typescript",
+    "multi-track",
+    "drag-and-drop",
+    "virtualization",
+    "accessibility",
+    "event-bus",
+    "undo-redo"
+  ],
+  "author": "React Timeline Library Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/react-timeline-library.git"
+  },
+  "homepage": "https://github.com/your-org/react-timeline-library#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/react-timeline-library/issues"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/index.js",
+      "maxSize": "100kb"
+    },
+    {
+      "path": "./dist/index.esm.js",
+      "maxSize": "100kb"
+    }
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@axe-core/react": "^4.10.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.8",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "autoprefixer": "^10.4.16",
+    "axe-core": "^4.10.3",
+    "bundlesize": "^0.18.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.7.0",
+    "jest-axe": "^10.0.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.5.0",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "ts-jest": "^29.1.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
