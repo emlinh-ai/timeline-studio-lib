@@ -558,7 +558,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 ```bash
-git clone https://github.com/your-org/react-timeline-library.git
+git clone https://github.com/emlinh-ai/react-timeline-library.git
 cd react-timeline-library
 npm install
 npm run dev

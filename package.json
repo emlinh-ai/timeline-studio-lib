@@ -57,11 +57,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/react-timeline-library.git"
+    "url": "https://github.com/emlinh-ai/react-timeline-library.git"
   },
-  "homepage": "https://github.com/your-org/react-timeline-library#readme",
+  "homepage": "https://github.com/emlinh-ai/react-timeline-library#readme",
   "bugs": {
-    "url": "https://github.com/your-org/react-timeline-library/issues"
+    "url": "https://github.com/emlinh-ai/react-timeline-library/issues"
   },
   "bundlesize": [
     {
