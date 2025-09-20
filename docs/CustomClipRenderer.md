@@ -7,7 +7,7 @@ The React Timeline Library supports custom clip renderers, allowing you to compl
 To use a custom clip renderer, pass a function to the `renderClip` prop of the Timeline component:
 
 ```tsx
-import { Timeline, ClipRendererProps } from 'react-timeline-library';
+import { Timeline, ClipRendererProps } from 'timeline-studio-lib';
 
 const CustomClipRenderer = ({ clip, isSelected, onSelect, onDrag, onResize, style }: ClipRendererProps) => {
   return (

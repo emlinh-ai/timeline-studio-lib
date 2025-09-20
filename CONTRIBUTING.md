@@ -14,8 +14,8 @@ Thank you for your interest in contributing to React Timeline Library! This docu
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/your-username/react-timeline-library.git
-   cd react-timeline-library
+   git clone https://github.com/your-username/timeline-studio-lib.git
+   cd timeline-studio-lib
    ```
 
 2. **Install Dependencies**

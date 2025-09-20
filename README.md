@@ -18,22 +18,22 @@ A comprehensive, reusable React video editing timeline library with multi-track 
 ## 📦 Installation
 
 ```bash
-npm install react-timeline-library
+npm install timeline-studio-lib
 ```
 
 ```bash
-yarn add react-timeline-library
+yarn add timeline-studio-lib
 ```
 
 ```bash
-pnpm add react-timeline-library
+pnpm add timeline-studio-lib
 ```
 
 ## 🚀 Quick Start
 
 ```tsx
 import React from 'react';
-import { Timeline, TimelineProps, Clip, Track } from 'react-timeline-library';
+import { Timeline, TimelineProps, Clip, Track } from 'timeline-studio-lib';
 
 const App = () => {
   const tracks: Track[] = [
@@ -118,7 +118,7 @@ export default App;
 ### Clips and Tracks
 
 ```tsx
-import { Clip, Track } from 'react-timeline-library';
+import { Clip, Track } from 'timeline-studio-lib';
 
 // Define different types of clips
 const videoClip: Clip = {
@@ -165,7 +165,7 @@ const textClip: Clip = {
 ### Custom Theme
 
 ```tsx
-import { Timeline, ThemeProvider, TimelineTheme } from 'react-timeline-library';
+import { Timeline, ThemeProvider, TimelineTheme } from 'timeline-studio-lib';
 
 const customTheme: TimelineTheme = {
   primaryColor: '#ff6b6b',
@@ -196,7 +196,7 @@ function App() {
 ### Custom Clip Renderer
 
 ```tsx
-import { Timeline, ClipRendererProps } from 'react-timeline-library';
+import { Timeline, ClipRendererProps } from 'timeline-studio-lib';
 
 const CustomClipRenderer = ({ clip, isSelected, onSelect }: ClipRendererProps) => {
   return (
@@ -239,7 +239,7 @@ import {
   EventBusProvider, 
   useEventBus,
   TimelineEventPayloads 
-} from 'react-timeline-library';
+} from 'timeline-studio-lib';
 
 function TimelineControls() {
   const eventBus = useEventBus();
@@ -292,7 +292,7 @@ function App() {
 ### Listening to Timeline Events
 
 ```tsx
-import { useEventListener } from 'react-timeline-library';
+import { useEventListener } from 'timeline-studio-lib';
 
 function TimelineMonitor() {
   useEventListener('timeline:clipClick', (payload) => {
@@ -316,7 +316,7 @@ function TimelineMonitor() {
 ### Virtualization for Large Datasets
 
 ```tsx
-import { Timeline, generateMockClips } from 'react-timeline-library';
+import { Timeline, generateMockClips } from 'timeline-studio-lib';
 
 function LargeTimelineExample() {
   // Generate 1000+ clips for testing
@@ -346,7 +346,7 @@ function LargeTimelineExample() {
 ### Performance Monitoring
 
 ```tsx
-import { PerformanceMeasurer, measureMemoryUsage } from 'react-timeline-library';
+import { PerformanceMeasurer, measureMemoryUsage } from 'timeline-studio-lib';
 
 function PerformanceExample() {
   const measurer = new PerformanceMeasurer();
@@ -416,7 +416,7 @@ Supported touch gestures:
 ### Undo/Redo
 
 ```tsx
-import { useUndoRedo } from 'react-timeline-library';
+import { useUndoRedo } from 'timeline-studio-lib';
 
 function UndoRedoControls() {
   const { undo, redo, canUndo, canRedo } = useUndoRedo();
@@ -437,7 +437,7 @@ function UndoRedoControls() {
 ### State Serialization
 
 ```tsx
-import { useStateSerialization } from 'react-timeline-library';
+import { useStateSerialization } from 'timeline-studio-lib';
 
 function SaveLoadControls() {
   const { exportState, importState } = useStateSerialization();
@@ -471,7 +471,7 @@ import {
   generateMockTracks,
   generateRealisticTimeline,
   performanceTestScenarios 
-} from 'react-timeline-library';
+} from 'timeline-studio-lib';
 
 // Generate test data
 const mockClips = generateMockClips(100);
@@ -558,8 +558,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 ```bash
-git clone https://github.com/emlinh-ai/react-timeline-library.git
-cd react-timeline-library
+git clone https://github.com/emlinh-ai/timeline-studio-lib.git
+cd timeline-studio-lib
 npm install
 npm run dev
 ```

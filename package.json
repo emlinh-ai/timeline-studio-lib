@@ -1,5 +1,5 @@
 {
-  "name": "react-timeline-library",
+  "name": "timeline-studio-lib",
   "version": "1.0.0",
   "description": "A reusable React video editing timeline library with multi-track support",
   "main": "dist/index.js",
@@ -57,11 +57,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/emlinh-ai/react-timeline-library.git"
+    "url": "https://github.com/emlinh-ai/timeline-studio-lib.git"
   },
-  "homepage": "https://github.com/emlinh-ai/react-timeline-library#readme",
+  "homepage": "https://github.com/emlinh-ai/timeline-studio-lib#readme",
   "bugs": {
-    "url": "https://github.com/emlinh-ai/react-timeline-library/issues"
+    "url": "https://github.com/emlinh-ai/timeline-studio-lib/issues"
   },
   "bundlesize": [
     {

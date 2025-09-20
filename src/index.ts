@@ -29,7 +29,7 @@ export * from './types';
  * 
  * @example
  * ```tsx
- * import { Timeline } from 'react-timeline-library';
+ * import { Timeline } from 'timeline-studio-lib';
  * 
  * <Timeline
  *   tracks={tracks}
@@ -45,7 +45,7 @@ export { Timeline, TimelineErrorBoundary, withErrorBoundary } from './components
  * 
  * @example
  * ```tsx
- * import { ClipRenderer } from 'react-timeline-library';
+ * import { ClipRenderer } from 'timeline-studio-lib';
  * 
  * const CustomClip = (props) => (
  *   <ClipRenderer {...props}>
@@ -65,7 +65,7 @@ export { ClipRenderer } from './components/ClipRenderer';
  * 
  * @example
  * ```tsx
- * import { ThemeProvider, defaultTheme } from 'react-timeline-library';
+ * import { ThemeProvider, defaultTheme } from 'timeline-studio-lib';
  * 
  * const customTheme = {
  *   ...defaultTheme,
@@ -89,7 +89,7 @@ export { ThemeProvider, useTheme, defaultTheme } from './theme';
  * 
  * @example
  * ```tsx
- * import { VirtualizationWrapper } from 'react-timeline-library';
+ * import { VirtualizationWrapper } from 'timeline-studio-lib';
  * 
  * <Timeline
  *   enableVirtualization={true}
@@ -111,7 +111,7 @@ export { VirtualizedTrackContainer } from './components/VirtualizedTrackContaine
  * 
  * @example
  * ```tsx
- * import { EventBusProvider, useEventBus } from 'react-timeline-library';
+ * import { EventBusProvider, useEventBus } from 'timeline-studio-lib';
  * 
  * function App() {
  *   return (
@@ -146,7 +146,7 @@ export {
  * 
  * @example
  * ```tsx
- * import { EventBus, createEventBus } from 'react-timeline-library';
+ * import { EventBus, createEventBus } from 'timeline-studio-lib';
  * 
  * const customEventBus = createEventBus('custom-namespace');
  * customEventBus.emit('timeline:addClip', { clip });
@@ -164,7 +164,7 @@ export { EventBus, createEventBus } from './eventBus/EventBus';
  * 
  * @example
  * ```tsx
- * import { timelineReducer, createInitialState, timelineActions } from 'react-timeline-library';
+ * import { timelineReducer, createInitialState, timelineActions } from 'timeline-studio-lib';
  * 
  * const [state, dispatch] = useReducer(timelineReducer, createInitialState());
  * dispatch(timelineActions.addClip(newClip));
@@ -181,7 +181,7 @@ export {
  * 
  * @example
  * ```tsx
- * import { useUndoRedo, useStateSerialization } from 'react-timeline-library';
+ * import { useUndoRedo, useStateSerialization } from 'timeline-studio-lib';
  * 
  * function TimelineControls() {
  *   const { undo, redo, canUndo, canRedo } = useUndoRedo();
@@ -206,7 +206,7 @@ export {
  * 
  * @example
  * ```tsx
- * import { validateClip, validateTimelineState } from 'react-timeline-library';
+ * import { validateClip, validateTimelineState } from 'timeline-studio-lib';
  * 
  * const isValid = validateClip(clipData);
  * const stateErrors = validateTimelineState(state);
@@ -229,7 +229,7 @@ export {
  * 
  * @example
  * ```tsx
- * import { serializeTimelineState, deserializeTimelineState } from 'react-timeline-library';
+ * import { serializeTimelineState, deserializeTimelineState } from 'timeline-studio-lib';
  * 
  * const serialized = serializeTimelineState(state);
  * const restored = deserializeTimelineState(serialized);
@@ -249,7 +249,7 @@ export {
  * 
  * @example
  * ```tsx
- * import { announceToScreenReader, formatTimeForScreenReader } from 'react-timeline-library';
+ * import { announceToScreenReader, formatTimeForScreenReader } from 'timeline-studio-lib';
  * 
  * // Announce clip selection to screen readers
  * announceToScreenReader(`Selected ${clip.metadata?.name} at ${formatTimeForScreenReader(clip.start)}`);
@@ -274,7 +274,7 @@ export {
  * 
  * @example
  * ```tsx
- * import { useScreenSize, useResponsiveConfig } from 'react-timeline-library';
+ * import { useScreenSize, useResponsiveConfig } from 'timeline-studio-lib';
  * 
  * function ResponsiveTimeline() {
  *   const { screenSize } = useScreenSize();
@@ -317,7 +317,7 @@ export type {
  * 
  * @example
  * ```tsx
- * import { generateMockClips, PerformanceMeasurer } from 'react-timeline-library';
+ * import { generateMockClips, PerformanceMeasurer } from 'timeline-studio-lib';
  * 
  * const mockClips = generateMockClips(1000);
  * const measurer = new PerformanceMeasurer();
